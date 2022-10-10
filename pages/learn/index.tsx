@@ -12,7 +12,7 @@ const Home: NextPage = () => {
             backgroundImage: `url(${banner.src})`,
             minHeight: "100vh",
             height: "100%",
-            paddingTop: "4rem",
+            paddingTop: "7rem",
             paddingBottom: "6rem",
           }}
           className="w-screen bg-cover bg-center bg-no-repeat flex justify-center flex-col"

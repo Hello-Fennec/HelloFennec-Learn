@@ -18,29 +18,15 @@ const TeamContainer = ({ children, team }: TeamContainerProps) => {
       <div
         style={{
           backgroundImage: `url(${team.background.src})`,
-          backgroundPosition: "left",
-          minHeight: "100vh",
-          height: "100%",
-          paddingTop: "4rem",
-          paddingBottom: "6rem",
         }}
-        className="w-full bg-cover bg-center bg-no-repeat bg-fixed "
+        className="w-full h-full py-24 min-h-screen bg-cover bg-no-repeat bg-fixed bg-left"
       >
-        <div
-          style={{ marginBottom: "1rem" }}
-          className="w-[95%] md:w-[90%] max-w-[64rem] m-auto flex justify-between "
-        >
-          <h1 className={"text-3xl font-bold shadow-lg"}>{team.title}</h1>
+        <div className="w-[95%] md:w-[90%] max-w-[64rem] m-auto flex justify-between  mb-4">
+          <h1 className="text-3xl font-bold drop-shadow-xl">{team.title}</h1>
           <motion.button
             whileHover={{ scale: 1.05 }}
-            style={{
-              background: "#07be72",
-              padding: "1rem",
-              borderRadius: "1rem",
-              fontFamily: "Kanit",
-              outline: "1px solid white",
-            }}
             onClick={toggleSchedule}
+            className="bg-[#0dcc93] p-4 rounded-2xl fontfamily-kanit outline-white outline outline-1"
           >
             ตารางเรียน
           </motion.button>
@@ -50,30 +36,17 @@ const TeamContainer = ({ children, team }: TeamContainerProps) => {
             display: showSchedule ? "block" : "none",
           }}
         >
-          <button
-            style={{
-              width: "100vw",
-              height: "100vh",
-              position: "fixed",
-              top: "0",
-              left: "0",
-              background: "rgba(0,0,0,0.5)",
-            }}
+          <motion.button
             onClick={toggleSchedule}
-          ><div
-            style={{
-              backgroundImage: `url(${team.schedule.src})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "90%",
-              height: "90%",
-            }}
-          /></button>
+            className="w-full h-full bg-black bg-opacity-75 fixed top-0 left-0 z-20"
+          >
+            <div
+              style={{
+                backgroundImage: `url(${team.schedule.src})`,
+              }}
+              className="w-[95%] sm:w-[90%] h-[90%] rotate-0 bg-contain bg-center bg-no-repeat fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+          </motion.button>
         </motion.div>
         {children}
       </div>
