@@ -16,7 +16,7 @@ const Card = ({ setOnHover, onHover, index, name, image, path }: CardProps) => {
     <Link href={path}>
       <a>
         <motion.div
-          whileHover={{ scale: 1.08, y: -10 }}
+          whileHover={{ scale: 1.06, y: -10 }}
           className={
             (onHover !== -1 && onHover !== index && "grayscale ") +
             " sm:w-60 h-80 bg-white rounded-3xl text-white text-2xl flex flex-col justify-end hover:shadow-lg  duration-150"
