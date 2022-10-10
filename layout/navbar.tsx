@@ -12,13 +12,13 @@ const Nav = () => {
             style={{
               backgroundImage: `url(${SIT.src})`,
             }}
-            className="w-[10rem] sm:w-[12rem] md:w-[15rem] h-full bg-contain bg-top bg-no-repeat"
+            className="w-[12rem] md:w-[15rem] h-full bg-contain bg-top bg-no-repeat"
           />
           <div
             style={{
               backgroundImage: `url(${Logo.src})`,
             }}
-            className="w-[5rem] sm:w-[7rem] md:w-[9rem] h-full bg-contain bg-top bg-no-repeat mt-2"
+            className="w-[7rem] md:w-[9rem] h-full bg-contain bg-top bg-no-repeat mt-2"
           />
         </div>
       </div>
