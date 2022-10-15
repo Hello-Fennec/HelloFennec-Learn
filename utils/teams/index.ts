@@ -32,6 +32,10 @@ export interface Team {
   schedule: StaticImageData;
 }
 
+interface Teams {
+  [key: string]: Team;
+}
+
 export const teamsArr: Team[] = [
   {
     title: "Front-end",
@@ -67,9 +71,9 @@ export const teamsArr: Team[] = [
   },
 ];
 
-export const teams = {
-  FrontEnd: teamsArr[0],
-  WebDesign: teamsArr[1],
-  GameDevelopment: teamsArr[2],
-  Infrastructure: teamsArr[3],
+export const teams: Teams = {
+  "front-end": teamsArr[0],
+  "web-design": teamsArr[1],
+  "game-development": teamsArr[2],
+  infrastructure: teamsArr[3],
 };
