@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import PageMotion from "../../../components/page-motion";
 import TeamContainer from "../../../layout/team-container";
 import Topic from "../../../components/topic";
-import { teams } from "../../../utils/teams";
+import { Team, teams } from "../../../utils/teams";
 import { TeamTopic } from "../../../utils/teams/team-topics";
 
 interface Props {
@@ -10,8 +10,7 @@ interface Props {
   team: string;
 }
 
-const Team: NextPage<Props> = ({ team }) => {
-
+const TeamPage: NextPage<Props> = ({ team }) => {
   return (
     <PageMotion>
       <TeamContainer team={teams[team]}>
@@ -33,12 +32,15 @@ const Team: NextPage<Props> = ({ team }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [
-      { params: { team: "front-end" } },
-      { params: { team: "game-development" } },
-      { params: { team: "web-design" } },
-      { params: { team: "infrastructure" } },
-    ],
+    paths: Object.keys(teams).map((teamName) => ({
+      params: { team: teamName },
+    })),
+
+    // { params: { team: "front-end" } },
+    // { params: { team: "game-development" } },
+    // { params: { team: "web-design" } },
+    // { params: { team: "infrastructure" } },
+
     fallback: false,
   };
 };
@@ -51,4 +53,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default Team;
+export default TeamPage;
