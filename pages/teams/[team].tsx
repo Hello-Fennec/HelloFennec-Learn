@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import PageMotion from "../../../components/page-motion";
-import TeamContainer from "../../../layout/team-container";
-import Topic from "../../../components/topic";
-import { Team, teams } from "../../../utils/teams";
-import { TeamTopic } from "../../../utils/teams/team-topics";
+import PageMotion from "../../components/page-motion";
+import TeamContainer from "../../layout/team-container";
+import Topic from "../../components/topic";
+import { Team, teams } from "../../utils/teams";
+import { TeamTopic } from "../../utils/teams/team-topics";
 
 interface Props {
   children: React.ReactNode;
