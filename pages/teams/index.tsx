@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           }}
           className="w-screen bg-cover bg-center bg-no-repeat flex justify-center flex-col"
         >
-          <h1 className="text-center text-3xl font-bold mb-5 ">Hello World Fennec - Learn</h1>
+          <h1 className="text-center text-3xl font-bold mb-5 text-white">Hello World Fennec - Learn</h1>
             <CardContainer />
           
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

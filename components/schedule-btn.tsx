@@ -14,7 +14,7 @@ const ScheduleBtn = ({ team, toggleSchedule }: ScheduleBtnProps) => {
       <motion.button
         whileHover={{ scale: 1.05 }}
         onClick={toggleSchedule}
-        className="bg-[#0dcc93] p-4 rounded-2xl fontfamily-kanit  flex"
+        className="bg-[#0dcc93] p-4 rounded-2xl fontfamily-kanit  flex text"
       >
         <div
           style={{
